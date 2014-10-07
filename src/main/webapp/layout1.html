@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<style>
+		.box {
+			float: left;
+			width: 200px;
+			height: 200px;
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid #aaaaaa;
+		}
+		
+		.zone {
+			width: 970px;
+			height: 970px;
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid #aaaaaa;
+		}
+		
+		.portlet {
+			font-size: 500%;
+			text-align: center;
+			vertical-align:middle;
+			width: 160px;
+			height: 160px; 
+			padding : 10px;
+			margin: 10px;
+			border: 1px solid #aaaaaa;
+			padding: 10px;
+		}
+		
+		.portlet .p {
+			
+		}
+	</style>
+	<script>
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+	
+		function drag(ev) {
+			ev.dataTransfer.setData("text/html", ev.target.id);
+		}
+	
+		function drop(ev) {
+			console.log("drop function fired");
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text/html");
+			console.log("data is " + data);
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+</head>
+<body>
+	<div class="zone">
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet1" class="portlet" draggable="true" ondragstart="drag(event)">1</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet2" class="portlet" draggable="true" ondragstart="drag(event)">2</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet3" class="portlet" draggable="true" ondragstart="drag(event)">3</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet4" class="portlet" draggable="true" ondragstart="drag(event)">4</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet5" class="portlet" draggable="true" ondragstart="drag(event)">5</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet6" class="portlet" draggable="true" ondragstart="drag(event)">6</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet7" class="portlet" draggable="true" ondragstart="drag(event)">7</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet8" class="portlet" draggable="true" ondragstart="drag(event)">8</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet9" class="portlet" draggable="true" ondragstart="drag(event)">9</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet10" class="portlet" draggable="true" ondragstart="drag(event)">10</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet11" class="portlet" draggable="true" ondragstart="drag(event)">11</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet12" class="portlet" draggable="true" ondragstart="drag(event)">12</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet13" class="portlet" draggable="true" ondragstart="drag(event)">13</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet14" class="portlet">14</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div id="portlet15" class="portlet" draggable="true" ondragstart="drag(event)">15</div>
+		</div>
+		<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			
+		</div>
+
+
+	</div>
+
+
+
+</body>
+</html>
